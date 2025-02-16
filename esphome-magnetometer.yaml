@@ -338,7 +338,7 @@ sensor:
       internal: ${hide_magnetic_field_strength_sensors}
       entity_category: diagnostic      
       filters:
-        - delta: 0.5
+        - delta: 2
     oversampling: ${qmc5883l_oversampling}
     update_interval: ${qmc5883l_update_interval}
 
