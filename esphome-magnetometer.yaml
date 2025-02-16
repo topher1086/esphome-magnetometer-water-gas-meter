@@ -19,8 +19,8 @@ substitutions:
   prefix_name: ''
   prefix_id: ''
 
-  qmc5883l_update_interval: '5ms'
-  qmc5883l_oversampling: '64x'
+  qmc5883l_update_interval: '250ms'
+  qmc5883l_oversampling: '512x'
 
   volume_per_half_rotation_initial_value: '0.01008156'
   flow_update_interval_seconds: '10'
