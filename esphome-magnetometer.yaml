@@ -19,8 +19,8 @@ substitutions:
   prefix_name: ''
   prefix_id: ''
 
-  qmc5883l_update_interval: '250ms'
-  qmc5883l_oversampling: '512x'
+  qmc5883l_update_interval: '5ms'
+  qmc5883l_oversampling: '64x'
 
   volume_per_half_rotation_initial_value: '0.01008156'
   flow_update_interval_seconds: '10'
@@ -332,13 +332,6 @@ sensor:
         - or:
             - throttle: 300s
             - delta: 0.5
-    heading:
-      id: ${prefix_id}qmc5883l_heading
-      name: ${prefix_name}Heading
-      internal: ${hide_magnetic_field_strength_sensors}
-      entity_category: diagnostic      
-      filters:
-        - delta: 0.5
     oversampling: ${qmc5883l_oversampling}
     update_interval: ${qmc5883l_update_interval}
 
