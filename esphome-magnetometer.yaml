@@ -219,20 +219,20 @@ button:
           }
           std::string axis_with_largest_range;
           float min, max;
-          if (x_range > 20 && x_range > y_range && x_range > z_range) {
+          if (x_range > 15 && x_range > y_range && x_range > z_range) {
             axis_with_largest_range = "x";
             min = id(${prefix_id}calibrating_axis_x_min);
             max = id(${prefix_id}calibrating_axis_x_max);
-          } else if (y_range > 20 && y_range > x_range && y_range > z_range) {
+          } else if (y_range > 15 && y_range > x_range && y_range > z_range) {
             axis_with_largest_range = "y";
             min = id(${prefix_id}calibrating_axis_y_min);
             max = id(${prefix_id}calibrating_axis_y_max);
-          } else if (z_range > 20 && z_range > x_range && z_range > y_range) {
+          } else if (z_range > 15 && z_range > x_range && z_range > y_range) {
             axis_with_largest_range = "z";
             min = id(${prefix_id}calibrating_axis_z_min);
             max = id(${prefix_id}calibrating_axis_z_max);
           } else {
-            ESP_LOGE("${prefix_id}calibration", "Calibration failed. No axis had a range of at least 20");
+            ESP_LOGE("${prefix_id}calibration", "Calibration failed. No axis had a range of at least 15");
             return;
           }
           float lower_threshold = min + (max - min) / 2 - 5;
